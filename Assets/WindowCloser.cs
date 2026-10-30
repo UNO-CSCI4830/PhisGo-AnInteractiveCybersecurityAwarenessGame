@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class UIWindowController : MonoBehaviour
+public class WindowCloser : MonoBehaviour
 {
-    // Reference to the window GameObject
+    // Drag the UI Window Canvas/Panel into this slot in the Inspector
     [SerializeField] private GameObject window;
 
     // This function will be called when the close button is clicked
