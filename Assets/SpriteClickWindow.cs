@@ -10,7 +10,7 @@ public class SpriteClickWindow : MonoBehaviour
     {
         if (uiWindow != null)
         {
-            uiWindow.SetActive(true); // Shows the window
+            uiWindow.SetActive(true); // Shows the window            
         }
     }
 }
