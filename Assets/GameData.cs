@@ -7,15 +7,19 @@ public static class GameData
     public static int[] emailStatus = new int[inboxSize]; // safe/scam status of each inbox email
     
 
-    // constructor will run the first time the class is accessed
-    static GameData()
+    // This tag forces Unity to run this method automatically on every single Play Mode press
+    // Do NOT replace with a constructor as Unity uses caching and will not reliably run
+    // the consrtuctor on Play
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void Initialize()
     {       
         // Set status for inbox emails 0 for scam and 1 for safe
         for (int i = 0; i < inboxSize; i++)
         {
             // Random.Range for integers is inclusive of min, exclusive of max
             emailStatus[i] = Random.Range(0, 2);
-        }   
+        } 
+        Debug.Log(string.Join(", ", emailStatus));  
     }
 }
 

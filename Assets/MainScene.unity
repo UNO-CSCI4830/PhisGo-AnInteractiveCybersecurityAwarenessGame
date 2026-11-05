@@ -1187,6 +1187,7 @@ GameObject:
   - component: {fileID: 1048431297}
   - component: {fileID: 1048431296}
   - component: {fileID: 1048431295}
+  - component: {fileID: 1048431298}
   m_Layer: 5
   m_Name: Inbox0
   m_TagString: Untagged
@@ -1296,6 +1297,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048431293}
   m_CullTransparentMesh: 1
+--- !u!114 &1048431298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048431293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bfd4a336b74e0448fe10e88339d099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InboxPreviewMaker
+  myInboxText: {fileID: 272055880}
 --- !u!1 &1097286521
 GameObject:
   m_ObjectHideFlags: 0
