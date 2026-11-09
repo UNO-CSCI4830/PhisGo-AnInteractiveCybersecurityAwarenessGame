@@ -6,7 +6,7 @@ public class InboxPreviewMaker : MonoBehaviour
     // Text object on the inbox email sprite. This is set in the Inspector window
     [SerializeField] private TMP_Text myInboxText;
 
-    // Number of email previews in the inbox. This is set in the Inspector window
+    // Index of email preview in the inbox. This is set in the Inspector window
     [SerializeField] private int previewNumber;
 
     // 2D array stores all possible inbox previews to show 
@@ -50,11 +50,11 @@ public class InboxPreviewMaker : MonoBehaviour
 
     void Update()
     {
-        // Randomly assign one of the possible inbox previews for the given preview entry
+        // Assign one of the possible inbox previews for the given preview entry
         if (myInboxText != null)
         {
-            int randomForIndex = GameData.emailStatus[previewNumber]; 
-            myInboxText.text = possibleInboxTexts[previewNumber, randomForIndex];
+            int choiceForEntry = GameData.emailStatus[previewNumber]; //generated in GameData
+            myInboxText.text = possibleInboxTexts[previewNumber, choiceForEntry];
         }              
     }
 }
