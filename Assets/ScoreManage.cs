@@ -1,16 +1,24 @@
 using UnityEngine;
 using TMPro; // Required to control TextMeshPro elements
 
+/*
+This class stores the player's score and has methods to handle displaying and changing the
+score during the game
+*/
 public class ScoreManager : MonoBehaviour
 {
-    // This public static instance makes a Singleton to invoke elsewhere
+    // This public static instance of this class makes a Singleton that can be invoked later
     public static ScoreManager Instance { get; private set; }
 
-    // Drag your TextMeshPro object into this slot in the Unity Inspector
+    // Text object to display the score. The initial value is set in the Inspector window
     [SerializeField] private TextMeshProUGUI scoreText; 
     
-    private int score = 100;  //begin the game with 100 points
+    private int score = 100;  // begin the game with 100 points
 
+    /*
+    The Awake method runs automatically once at the beginning when the game is played.
+    It sets up a single instance of this class.
+    */
     void Awake()
     {
         // Establish the Singleton instance
@@ -24,26 +32,37 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    /*
+    The Start method runs automatically once at the beginning after the awake method finishes.
+    It displays the initial score text on the screen
+    */
     void Start()
     {
         UpdateScoreDisplay();
     }
 
-    // Call this public function when the player loses points
-    // Looks like this from another class > ScoreManager.Instance.LosePoints()
+    /*
+    This method decreases the player's score
+    Example use from outside class: ScoreManager.Instance.LosePoints()
+    */
     public void LosePoints()
     {
-        score -= 10;
-        // prevent negative score
-        if (score < 0)
+        score -= 10;        
+        if (score < 0) // prevent negative score
         {
             score = 0;
         }
         UpdateScoreDisplay();
     }
 
+    /*
+    This method assigns the text with the current score value to the scoreText object. 
+    */
     private void UpdateScoreDisplay()
     {
-        scoreText.text = "Score: " + score;
+        if (scoreText != null) // assures myInboxText object was assigned in inspector
+        {
+            scoreText.text = "Score: " + score;
+        }
     }
 }
