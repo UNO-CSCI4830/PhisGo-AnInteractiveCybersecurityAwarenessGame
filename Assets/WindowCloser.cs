@@ -1,16 +1,23 @@
 using UnityEngine;
 
+/*
+This class is used when clicking on a button should close a window
+*/
 public class WindowCloser : MonoBehaviour
 {
-    // Drag the UI Window Canvas/Panel into this slot in the Inspector
+    // UI Window Canvas/Panel object that should close. 
+    // The initial value is set in the Inspector window
     [SerializeField] private GameObject window;
 
-    // This function will be called when the close button is clicked
+    /*
+    This runs automatically when the button containing this code is clicked.
+    It will close the window stored in the window field
+    */
     public void CloseWindow()
     {
-        if (window != null)
+        if (window != null) // assures window object was assigned in inspector
         {
-            window.SetActive(false); // Hides the window
+            window.SetActive(false); 
         }
     }
 }
