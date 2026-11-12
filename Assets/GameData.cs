@@ -7,9 +7,8 @@ need access to.
 public static class GameData 
 {
     // This array stores the safe/scam status of each inbox email
-    // Example use from outside class: GameData.emailStatus[i]
-    private static int inboxSize = 5;  // number of emails in the inbox
-    public static int[] emailStatus = new int[inboxSize];
+    public const int NUM_EMAILS = 5;  // number of emails in the inbox
+    private static int[] emailStatus = new int[NUM_EMAILS];
 
     // This is the index of whichever email is currently being viewed or
     // -1 if no email is selected
@@ -29,17 +28,31 @@ public static class GameData
     private static void Initialize()
     {       
         // Set status for inbox emails 0 for scam and 1 for safe
-        for (int i = 0; i < inboxSize; i++)
+        for (int i = 0; i < NUM_EMAILS; i++)
         {
             // Random.Range for integers is inclusive of min, exclusive of max
             emailStatus[i] = Random.Range(0, 2);
         } 
     }
 
+    // Getter for emailStatus
+    public static int getEmailStatus(int index)
+    {
+        if (index >= 0 && index < NUM_EMAILS) // check that given index is in bounds
+        {
+            return emailStatus[index];
+        } else {
+            return -1; //error case
+        }
+    }
+
     // Setter for currentEmailIndex
     public static void updateCurrentEmailIndex(int newIndex)
     {
-        currentEmailIndex = newIndex;
+        if (newIndex >= 0 && newIndex < NUM_EMAILS) // check that given index is in bounds
+        {
+            currentEmailIndex = newIndex;
+        }
     }
 
     // Getter for currentEmailIndex
