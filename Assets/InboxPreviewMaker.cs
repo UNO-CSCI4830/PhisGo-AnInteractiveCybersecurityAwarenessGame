@@ -11,7 +11,6 @@ public class InboxPreviewMaker : MonoBehaviour
     [SerializeField] private TMP_Text myInboxText;
     // Index of email preview in the inbox. The value is set in the Inspector window
     [SerializeField] private int previewNumber;
-    private int numEmails = 5; // total number of emails in the inbox
 
     /*
     This 2D array stores all possible inbox previews for the game 
@@ -27,7 +26,7 @@ public class InboxPreviewMaker : MonoBehaviour
     */
     private void Awake() 
     {
-        possibleInboxTexts = new string[numEmails, 2];
+        possibleInboxTexts = new string[GameData.NUM_EMAILS, 2];
 
         /* FIRST INBOX ENTRY **********************************************/
         // index 0 is the scam email preview 
@@ -70,9 +69,9 @@ public class InboxPreviewMaker : MonoBehaviour
     {
         // assures myInboxText object was assigned in inspector and previewNumber from
         // inspector is not out of bounds
-        if (myInboxText != null && previewNumber >= 0 && previewNumber < numEmails) 
+        if (myInboxText != null && previewNumber >= 0 && previewNumber < GameData.NUM_EMAILS) 
         {
-            int choiceForEntry = GameData.emailStatus[previewNumber]; // 0 or 1 from GameData
+            int choiceForEntry = GameData.getEmailStatus(previewNumber); // 0 or 1 from GameData
             myInboxText.text = possibleInboxTexts[previewNumber, choiceForEntry];
         }              
     }

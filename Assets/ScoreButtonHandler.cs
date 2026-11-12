@@ -29,7 +29,7 @@ public class ScoreButtonHandler : MonoBehaviour
             // do nothing
         }
         // Case where answer is correct
-        else if(buttonStatus ==  GameData.emailStatus[GameData.getCurrentEmailIndex()])
+        else if(buttonStatus ==  GameData.getEmailStatus(GameData.getCurrentEmailIndex()))
         {
             // show pop-up for correct
             /* TO ADD LATER

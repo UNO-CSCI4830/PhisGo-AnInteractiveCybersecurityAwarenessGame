@@ -11,7 +11,6 @@ public class EmailTextMaker : MonoBehaviour
     public TextMeshProUGUI emailText;
     // Index of desired email from the inbox. The value is set in the Inspector window
     [SerializeField] private int inboxIndex;
-    private int numEmails = 5; // total number of emails in the inbox
 
     /*
     This 2D array stores all possible email text bodies for the game.  
@@ -27,7 +26,7 @@ public class EmailTextMaker : MonoBehaviour
     */
     private void Awake() 
     {
-        possibleEmailTexts = new string[numEmails, 2];
+        possibleEmailTexts = new string[GameData.NUM_EMAILS, 2];
 
         /* FIRST INBOX ENTRY **********************************************/
         // index 0 is the scam email  
@@ -70,9 +69,9 @@ public class EmailTextMaker : MonoBehaviour
     {
         // assures emailText object was assigned in inspector and inboxIndex from
         // inspector is not out of bounds
-        if (emailText != null && inboxIndex >= 0 && inboxIndex < numEmails) 
+        if (emailText != null && inboxIndex >= 0 && inboxIndex < GameData.NUM_EMAILS) 
         {
-            int choiceForEntry = GameData.emailStatus[inboxIndex]; // 0 or 1 from GameData
+            int choiceForEntry = GameData.getEmailStatus(inboxIndex); // 0 or 1 from GameData
             emailText.text = possibleEmailTexts[inboxIndex, choiceForEntry];
         }
 
