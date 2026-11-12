@@ -10,6 +10,10 @@ public static class GameData
     // Example use from outside class: GameData.emailStatus[i]
     private static int inboxSize = 5;  // number of emails in the inbox
     public static int[] emailStatus = new int[inboxSize];
+
+    // This is the index of whichever email is currently being viewed or
+    // -1 if no email is selected
+    private static int currentEmailIndex = -1;
     
 
     /*
@@ -30,6 +34,18 @@ public static class GameData
             // Random.Range for integers is inclusive of min, exclusive of max
             emailStatus[i] = Random.Range(0, 2);
         } 
+    }
+
+    // Setter for currentEmailIndex
+    public static void updateCurrentEmailIndex(int newIndex)
+    {
+        currentEmailIndex = newIndex;
+    }
+
+    // Getter for currentEmailIndex
+    public static int getCurrentEmailIndex()
+    {
+        return currentEmailIndex;
     }
 }
 
