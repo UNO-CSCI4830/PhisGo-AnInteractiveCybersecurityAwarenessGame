@@ -75,5 +75,8 @@ public class EmailTextMaker : MonoBehaviour
             int choiceForEntry = GameData.emailStatus[inboxIndex]; // 0 or 1 from GameData
             emailText.text = possibleEmailTexts[inboxIndex, choiceForEntry];
         }
+
+        // Tell the GameData class which email is current
+        GameData.updateCurrentEmailIndex(inboxIndex);
     }
 }
