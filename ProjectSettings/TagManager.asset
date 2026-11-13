@@ -47,6 +47,9 @@ TagManager:
   - name: window
     uniqueID: 1001916633
     locked: 0
+  - name: pop-up
+    uniqueID: 3778151597
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []

@@ -50,4 +50,21 @@ public static class ProgressTracker
             return false; // error case
         }
     }
+
+    /*
+    This method returns whether the entire level is complete. This occurs when every inbox
+    entry has been completed
+    */
+    public static bool LevelComplete()
+    {
+        for (int i = 0; i < GameData.NUM_EMAILS; i++)
+        {
+            if(!IsComplete(i))
+            {
+                return false; // if a single email is not done, the level is not complete
+            }
+        }
+
+        return true; // only reaches here if all emails were complete
+    }
 }
