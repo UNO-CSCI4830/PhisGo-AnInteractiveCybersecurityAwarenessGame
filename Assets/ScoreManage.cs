@@ -60,7 +60,7 @@ public class ScoreManager : MonoBehaviour
     */
     private void UpdateScoreDisplay()
     {
-        if (scoreText != null) // assures myInboxText object was assigned in inspector
+        if (scoreText != null) // assures scoreText object was assigned in inspector
         {
             scoreText.text = "Score: " + score;
         }

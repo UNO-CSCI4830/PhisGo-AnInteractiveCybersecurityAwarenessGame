@@ -7,11 +7,13 @@ accordingly, and also make a pop-up telling the user how they did.
 */
 public class ScoreButtonHandler : MonoBehaviour
 {
-    // UI Window Canvas/Panel object that should pop up. There is one for correct and one
-    // for incorrect answers. 
+    // Text object that should pop up with feedback
     // The initial value is set in the Inspector window
-    //[SerializeField] private GameObject popupForCorrect; 
-    //[SerializeField] private GameObject popupForInorrect; 
+    //[SerializeField] private TextMeshProUGUI popupText; 
+
+    // UI Window Canvas/Panel object that ccontains the feedback text
+    // The initial value is set in the Inspector window
+    //[SerializeField] private GameObject popupWindow; 
 
     // Holds which answer type this button signifies. 0 for scam, 1 for safe
     // The initial value is set in the Inspector window
@@ -19,36 +21,54 @@ public class ScoreButtonHandler : MonoBehaviour
 
     /*
     This method runs when the button is clicked. It will check the correctness of the answer
-    and then handle the resulting score change and pop-up window
+    and then handle the resulting score change and pop-up window with feedback
     */
     public void OnButtonClicked()
     {
+        int currentIndex = GameData.getCurrentEmailIndex(); // store to reuse more easily
+
         // Case where no email has been selected
-        if (GameData.getCurrentEmailIndex() < 0)
+        if (currentIndex < 0)
         {
-            // do nothing
+            // add pop-up window
+        }
+        // Case where use already finished this email
+        else if(ProgressTracker.IsComplete(currentIndex))
+        {
+            // add pop-up window
         }
         // Case where answer is correct
-        else if(buttonStatus ==  GameData.getEmailStatus(GameData.getCurrentEmailIndex()))
+        else if(buttonStatus ==  GameData.getEmailStatus(currentIndex))
         {
-            // show pop-up for correct
+            // set text for correct
+
+            // show pop-up 
             /* TO ADD LATER
-            if (popupForCorrect != null)
+            if (popupWindow != null)
             {
-                popupForCorrect.SetActive(true);
+                popupWindow.SetActive(true);
             }
             */
+
+            // Mark this location complete
+            ProgressTracker.MarkComplete(currentIndex);
+            
         // Case where answer is incorrect
         } else {
-            // show pop-up for incorrect
+            // set text for incorrect
+
+            // show pop-up
             /* TO ADD LATER
-            if (popupForInorrect != null)
+            if (popupWindow != null)
             {
-                popupForInorrect.SetActive(true);
+                popupWindow.SetActive(true);
             }
             */
             // user loses points
             ScoreManager.Instance.LosePoints();
+
+            // Mark this location complete
+            ProgressTracker.MarkComplete(currentIndex);
         }        
     }
 }
