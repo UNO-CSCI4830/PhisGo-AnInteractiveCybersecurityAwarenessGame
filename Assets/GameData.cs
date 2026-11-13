@@ -21,7 +21,7 @@ public static class GameData
     a safe (1) email on that play through.
     
     NOTE: the runtime tag forces Unity to run this method automatically on every single 
-    Play Mode press. It acts as a constructor since a typical constructor shoul be used
+    Play Mode press. It acts as a constructor since a typical constructor should not be used
     in Unity. Unity uses caching and will not reliably run a consrtuctor on Play
     */
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
