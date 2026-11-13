@@ -56,6 +56,16 @@ public class ScoreManager : MonoBehaviour
     }
 
     /*
+    This method increases the player's score
+    Example use from outside class: ScoreManager.Instance.GainPoints()
+    */
+    public void GainPoints()
+    {
+        score += 10;        
+        UpdateScoreDisplay();
+    }
+
+    /*
     This method assigns the text with the current score value to the scoreText object. 
     */
     private void UpdateScoreDisplay()

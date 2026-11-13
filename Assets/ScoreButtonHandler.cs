@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 /*
 This class is used for the buttons that the user clicks to label emails as
@@ -9,11 +10,11 @@ public class ScoreButtonHandler : MonoBehaviour
 {
     // Text object that should pop up with feedback
     // The initial value is set in the Inspector window
-    //[SerializeField] private TextMeshProUGUI popupText; 
+    [SerializeField] private TextMeshProUGUI popupText; 
 
     // UI Window Canvas/Panel object that ccontains the feedback text
     // The initial value is set in the Inspector window
-    //[SerializeField] private GameObject popupWindow; 
+    [SerializeField] private GameObject popupWindow; 
 
     // Holds which answer type this button signifies. 0 for scam, 1 for safe
     // The initial value is set in the Inspector window
@@ -30,45 +31,48 @@ public class ScoreButtonHandler : MonoBehaviour
         // Case where no email has been selected
         if (currentIndex < 0)
         {
-            // add pop-up window
+            // display window with feedback
+            makePopUp("Please select an email from the inbox");
         }
-        // Case where use already finished this email
+        // Case where user already finished this email
         else if(ProgressTracker.IsComplete(currentIndex))
         {
-            // add pop-up window
+            // display window with feedback
+            makePopUp("You have already completed this email");
         }
         // Case where answer is correct
         else if(buttonStatus ==  GameData.getEmailStatus(currentIndex))
         {
-            // set text for correct
-
-            // show pop-up 
-            /* TO ADD LATER
-            if (popupWindow != null)
-            {
-                popupWindow.SetActive(true);
-            }
-            */
+            // display window with feedback
+            makePopUp("That's correct! Good job.");
 
             // Mark this location complete
             ProgressTracker.MarkComplete(currentIndex);
             
         // Case where answer is incorrect
         } else {
-            // set text for incorrect
-
-            // show pop-up
-            /* TO ADD LATER
-            if (popupWindow != null)
-            {
-                popupWindow.SetActive(true);
-            }
-            */
+            // display window with feedback
+            makePopUp("Incorrect. Check the notepad for tips!");
+            
             // user loses points
             ScoreManager.Instance.LosePoints();
 
             // Mark this location complete
             ProgressTracker.MarkComplete(currentIndex);
         }        
+    }
+
+    /*
+    This method sets a new message for the pop-up window and displays it
+    */
+    private void makePopUp(string message)
+    {
+        // set text for window
+        popupText.text = message;
+        // show pop-up
+        if (popupWindow != null)
+        {
+            popupWindow.SetActive(true);
+        }
     }
 }

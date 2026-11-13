@@ -26,7 +26,7 @@ public static class GameData
     */
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize()
-    {       
+    {      
         // Set status for inbox emails 0 for scam and 1 for safe
         for (int i = 0; i < NUM_EMAILS; i++)
         {

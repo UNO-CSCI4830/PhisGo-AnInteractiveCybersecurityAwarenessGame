@@ -42,6 +42,22 @@ public class LevelManager : MonoBehaviour
     }
 
     /*
+    This method is the getter for level
+    */
+    public int getLevel()
+    {
+        return level;
+    }
+
+    /*
+    This method increases the player's level by 1
+    */
+    public void LevelUp()
+    {
+        level++;
+    }
+
+    /*
     This method assigns the text with the current level to the levelText object. 
     */
     private void UpdateLevelDisplay()
