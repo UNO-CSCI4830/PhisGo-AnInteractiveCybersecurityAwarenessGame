@@ -400,7 +400,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 108790941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96bfd4a336b74e0448fe10e88339d099, type: 3}
+  m_Script: {fileID: 11500000, guid: 327654509bcddaa4fa0d1531fdb4ece0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InboxPreviewMaker
   myInboxText: {fileID: 449998660}
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 108790941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c542dc4ef63c3445b79a2eaedfba8c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c8975602ae7ab746b8e6059a23d4888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmailTextMaker
   emailText: {fileID: 599935071}
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 134214793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96bfd4a336b74e0448fe10e88339d099, type: 3}
+  m_Script: {fileID: 11500000, guid: 327654509bcddaa4fa0d1531fdb4ece0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InboxPreviewMaker
   myInboxText: {fileID: 1631673554}
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 134214793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c542dc4ef63c3445b79a2eaedfba8c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c8975602ae7ab746b8e6059a23d4888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmailTextMaker
   emailText: {fileID: 599935071}
@@ -665,8 +665,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1681453761}
-        m_TargetAssemblyTypeName: UIWindowController, Assembly-CSharp
+      - m_Target: {fileID: 1321750372}
+        m_TargetAssemblyTypeName: WindowCloser, Assembly-CSharp
         m_MethodName: CloseWindow
         m_Mode: 1
         m_Arguments:
@@ -798,8 +798,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1681453762}
-        m_TargetAssemblyTypeName: UIWindowController, Assembly-CSharp
+      - m_Target: {fileID: 2142903863}
+        m_TargetAssemblyTypeName: WindowCloser, Assembly-CSharp
         m_MethodName: CloseWindow
         m_Mode: 1
         m_Arguments:
@@ -2393,7 +2393,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1681453763}
+      - m_Target: {fileID: 1775844847}
         m_TargetAssemblyTypeName: WindowCloser, Assembly-CSharp
         m_MethodName: CloseWindow
         m_Mode: 1
@@ -2461,7 +2461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &719297610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2537,7 +2537,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 719297609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc65ecf5f9699e645ac55015be2313da, type: 3}
+  m_Script: {fileID: 11500000, guid: df302c9b7c772d94da2cdf733bc10498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindowCloser
   window: {fileID: 719297609}
@@ -2644,7 +2644,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 743656174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bcf6e419ed208246a90fbfae0668ffc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5473482353b8ae847be5857fd752f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteClickWindow
   uiWindow: {fileID: 1775844843}
@@ -2971,7 +2971,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 822347510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96bfd4a336b74e0448fe10e88339d099, type: 3}
+  m_Script: {fileID: 11500000, guid: 327654509bcddaa4fa0d1531fdb4ece0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InboxPreviewMaker
   myInboxText: {fileID: 294508948}
@@ -2985,7 +2985,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 822347510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c542dc4ef63c3445b79a2eaedfba8c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c8975602ae7ab746b8e6059a23d4888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmailTextMaker
   emailText: {fileID: 599935071}
@@ -3236,7 +3236,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 998643054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98fd73b75dd0aa945b1220678c6ed0af, type: 3}
+  m_Script: {fileID: 11500000, guid: f2ce644abfdecc447a1221f4c4245302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreButtonHandler
   popupText: {fileID: 1268606908}
@@ -3660,7 +3660,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048431293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96bfd4a336b74e0448fe10e88339d099, type: 3}
+  m_Script: {fileID: 11500000, guid: 327654509bcddaa4fa0d1531fdb4ece0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InboxPreviewMaker
   myInboxText: {fileID: 272055880}
@@ -3674,7 +3674,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048431293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c542dc4ef63c3445b79a2eaedfba8c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c8975602ae7ab746b8e6059a23d4888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmailTextMaker
   emailText: {fileID: 599935071}
@@ -3782,7 +3782,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1097286521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bcf6e419ed208246a90fbfae0668ffc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5473482353b8ae847be5857fd752f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteClickWindow
   uiWindow: {fileID: 2142903859}
@@ -4333,13 +4333,14 @@ GameObject:
   - component: {fileID: 1321750369}
   - component: {fileID: 1321750371}
   - component: {fileID: 1321750370}
+  - component: {fileID: 1321750372}
   m_Layer: 5
   m_Name: WelcomeWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1321750369
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4358,7 +4359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 16.85}
+  m_AnchoredPosition: {x: 0, y: 16.850006}
   m_SizeDelta: {x: -277.02, y: -203.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321750370
@@ -4399,6 +4400,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321750368}
   m_CullTransparentMesh: 1
+--- !u!114 &1321750372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321750368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df302c9b7c772d94da2cdf733bc10498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindowCloser
+  window: {fileID: 1321750368}
 --- !u!1 &1364190743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,7 +4826,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1492320749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98fd73b75dd0aa945b1220678c6ed0af, type: 3}
+  m_Script: {fileID: 11500000, guid: f2ce644abfdecc447a1221f4c4245302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreButtonHandler
   popupText: {fileID: 1268606908}
@@ -4967,9 +4981,6 @@ GameObject:
   - component: {fileID: 1681453759}
   - component: {fileID: 1681453758}
   - component: {fileID: 1681453757}
-  - component: {fileID: 1681453761}
-  - component: {fileID: 1681453762}
-  - component: {fileID: 1681453763}
   m_Layer: 5
   m_Name: Canvas_Windows
   m_TagString: Untagged
@@ -5064,45 +5075,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1681453761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681453756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc65ecf5f9699e645ac55015be2313da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIWindowController
-  window: {fileID: 1321750368}
---- !u!114 &1681453762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681453756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc65ecf5f9699e645ac55015be2313da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIWindowController
-  window: {fileID: 2142903859}
---- !u!114 &1681453763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681453756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc65ecf5f9699e645ac55015be2313da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindowCloser
-  window: {fileID: 1775844843}
 --- !u!1 &1751156449
 GameObject:
   m_ObjectHideFlags: 0
@@ -5247,7 +5219,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1751156449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96bfd4a336b74e0448fe10e88339d099, type: 3}
+  m_Script: {fileID: 11500000, guid: 327654509bcddaa4fa0d1531fdb4ece0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InboxPreviewMaker
   myInboxText: {fileID: 2034371723}
@@ -5261,7 +5233,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1751156449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c542dc4ef63c3445b79a2eaedfba8c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c8975602ae7ab746b8e6059a23d4888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmailTextMaker
   emailText: {fileID: 599935071}
@@ -5277,6 +5249,7 @@ GameObject:
   - component: {fileID: 1775844846}
   - component: {fileID: 1775844845}
   - component: {fileID: 1775844844}
+  - component: {fileID: 1775844847}
   m_Layer: 5
   m_Name: NotebookWindow
   m_TagString: Untagged
@@ -5339,9 +5312,22 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 16.850006}
+  m_AnchoredPosition: {x: -0.000061035156, y: 16.850006}
   m_SizeDelta: {x: -277.02, y: -203.44}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1775844847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775844843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df302c9b7c772d94da2cdf733bc10498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindowCloser
+  window: {fileID: 1775844843}
 --- !u!1 &1852261399
 GameObject:
   m_ObjectHideFlags: 0
@@ -5457,7 +5443,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1852261399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66962ed755706b4fbc2cdfe045e279a, type: 3}
+  m_Script: {fileID: 11500000, guid: bdf0a33133003784f829fa30155b590e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
   scoreText: {fileID: 2035177142}
@@ -5470,7 +5456,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1852261399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4440c41a5c7005748a3cbc6e8fc44271, type: 3}
+  m_Script: {fileID: 11500000, guid: 46cefbaefe141764ca4588f72506f2d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   levelText: {fileID: 1016323315}
@@ -6103,7 +6089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96.63, y: -93}
+  m_AnchoredPosition: {x: -96.630005, y: -93}
   m_SizeDelta: {x: 193.26, y: 70.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035177142
@@ -6293,7 +6279,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2120170467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc65ecf5f9699e645ac55015be2313da, type: 3}
+  m_Script: {fileID: 11500000, guid: df302c9b7c772d94da2cdf733bc10498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindowCloser
   window: {fileID: 2120170467}
@@ -6308,13 +6294,14 @@ GameObject:
   - component: {fileID: 2142903860}
   - component: {fileID: 2142903862}
   - component: {fileID: 2142903861}
+  - component: {fileID: 2142903863}
   m_Layer: 5
   m_Name: ProfileWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2142903860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6378,6 +6365,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142903859}
   m_CullTransparentMesh: 1
+--- !u!114 &2142903863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142903859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df302c9b7c772d94da2cdf733bc10498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindowCloser
+  window: {fileID: 2142903859}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
