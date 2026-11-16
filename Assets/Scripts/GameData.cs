@@ -12,7 +12,7 @@ public static class GameData
 
     // This is the index of whichever email is currently being viewed or
     // -1 if no email is selected
-    private static int currentEmailIndex = -1;
+    private static int currentEmailIndex;
     
 
     /*
@@ -33,6 +33,8 @@ public static class GameData
             // Random.Range for integers is inclusive of min, exclusive of max
             emailStatus[i] = Random.Range(0, 2);
         } 
+
+        currentEmailIndex = -1;  // start with no email selected
     }
 
     // Getter for emailStatus
