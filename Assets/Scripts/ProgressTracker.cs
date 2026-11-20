@@ -1,26 +1,28 @@
 using UnityEngine;
+using System.Runtime.CompilerServices; // for field visibility for testing
 
 /*
     This class keeps track of the user's progress through a level and will mark and
     return which emails have been completed.
 */
+[assembly: InternalsVisibleTo("Tests")] // allows unit tests to set otherwise private fields
 public static class ProgressTracker 
 {
     // keeps track of which emails in the inbox have been completed
-    private static bool[] completed = new bool[GameData.NUM_EMAILS];
+    internal static bool[] completed = new bool[GameData.NUM_EMAILS];
 
 
     /*
-    This method initializes the "completed" array. 
+    This method sets everything in the "completed" array to false. This is the desired
+    beginning state of the array since at the beginning there are no completed emails 
     
     NOTE: the runtime tag forces Unity to run this method automatically on every single 
     Play Mode press. It acts as a constructor since a typical constructor should not be used
     in Unity. Unity uses caching and will not reliably run a consrtuctor on Play
     */
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    private static void Initialize()
+    public static void ResetArray()
     {
-        // Initialize array. At the beginning there are no completed emails
         for (int i = 0; i < GameData.NUM_EMAILS; i++)
         {
             completed[i] = false;
@@ -47,7 +49,7 @@ public static class ProgressTracker
         {
             return completed[index];
         } else {
-            return false; // error case
+            return false; // index error case
         }
     }
 
